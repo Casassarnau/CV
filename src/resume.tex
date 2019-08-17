@@ -1,0 +1,161 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2010 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,12pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.2in}
+\addtolength{\textheight}{1.0in}
+\usepackage[pdftex,
+            pdfauthor={Arnau Casas Saez},
+            pdftitle={Arnau's resume},
+            pdfsubject={Arnau Casas Saez personal resume and CV},
+            pdfkeywords={resume, cv, Arnau Casas, software engineer,},
+            pdfproducer={Latex with hyperref},
+            pdfcreator={pdflatex, or other tool}]{hyperref}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadinged}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4}\\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1}%
+}
+
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+ \textbf{\large Arnau Casas Saez}& \href{mailto:casassarnau@gmail.com}{casassarnau@gmail.com} \\
+ & +34 651 84 29 80
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Education}
+	\begin{itemize}
+
+		\item
+			\ressubheadinged{Universitat Polit\`ecnica de Catalunya}{Barcelona, Spain}{B.S., Computer Science (9.1/10)}{September 2018 - Present}
+			\begin{itemize}
+				\resitem{\textbf{Courses:} Introduction to Computers, Physics, Programming I, Programming II, Fundamentals of Mathematics, Mathematics I, Mathematics II, Computer Organization.}
+			\end{itemize}
+
+        \item
+			\ressubheadinged{Santa Teresa de Lisieux}{Barcelona, Spain}{Baccalaureate, Technology (8.56/10)}{September 2016 - June 2018}
+			
+			
+	\end{itemize}
+
+% \resheading{Research experience}
+% 	\begin{itemize}
+% 		\item
+% 			\ressubheading{Project EPIC, Colorado University}{Boulder, CO}{Research intern}{Research intern, February 2017 - present}
+% 			\begin{itemize}
+% 				\item Developed infrastructure to collect and analyze Twitter data in real time with an average of 2000 tweets/minute
+% 				\item Written \textit{Big Data Analytics in Container Orchestrated Systems} as my B.S. thesis.
+% 				\item Designed and built big data analytics system prototype on Kubernetes.
+% 			\end{itemize}
+% 	\end{itemize}
+
+\resheading{Experience}
+	\begin{itemize}
+		\item
+			\ressubheading{HackUPC}{Barcelona, Spain}{Web developer}{Web developer, March 2019 - Present}
+			\begin{itemize}
+				\resitem{Developed mentorship platform frontend using React.js.}
+				\resitem{Volunteered during HackUPC 2018, helping with logistic tasks.}
+			\end{itemize}
+		\item
+			\ressubheading{YMCA of Greater Indianapolis}{St. Paul, IN}{Junior Summer Camp Counselor}{Junior Summer Camp Counselor, Summer 2018}
+			\begin{itemize}
+				\resitem{Supervised groups of approximately 12 campers in resident camp setting.}
+				\resitem{Responsible for creating and managing activities autonomously}
+			\end{itemize}
+
+	\end{itemize}
+
+\resheading{Projects}
+	\begin{itemize}
+		\item
+			\ressubheading{Kalorika}{Barcelona, Spain}{Student}{Spring 2017}
+			\begin{itemize}
+				\resitem{The objective was to develop a tool to reduce children's obesity.}
+				\resitem{Uses Python and Flask for the backend.}
+				\resitem{Shows nutrients from a dish, given a picture.}
+				\resitem{Uses Clarifai API and Edamam API for image processing and image extraction.}
+			\end{itemize}
+	\end{itemize}
+
+% \resheading{Leadership}
+% 	\begin{itemize}
+% 		\item 
+% 			\ressubheading{HackCU, University of Colorado Boulder}{Boulder, CO}{Tech director}{Tech director, February 2017 - April 2019}
+% 			\begin{itemize}
+% 				\resitem{Co-directed Colorado's biggest student hackathon with 600 attendees and a 15 people core team.}
+% 			\end{itemize}
+% 		\item
+% 			\ressubheading{HackUPC, Universitat Polit\`ecnica de Catalunya}{Barcelona, Spain}{Co-Director and organizer}{Co-Director, November 2015 - September 2018}
+% 			\begin{itemize}
+% 				\resitem{Co-directed Spain's biggest student hackathon with 500 attendees and a 20 people core team.}
+% 				% \item Directed web development team with 5 person team for 2 editions.
+% 			\end{itemize}
+% 	\end{itemize}
+
+\resheading{Awards}
+	\begin{itemize}
+		\resitem{\textbf{Finalist in "19è fòrum de recerca de les corts". With Kalorika.} (2018)}
+		\resitem{\textbf{Finalist in "Mostra de Recerca jove". With Kalorika.} (2018)}
+	\end{itemize}
+
+% \resheading{Publications}
+% 	\begin{itemize}
+% 		\item 	Jennings A., Gerard C., Kenneth M. A., Leysia P., and Rebecca M.  \textbf{Incorporating Context and Location Into Social Media Analysis: A Scalable, Cloud-Based Approach for More Powerful Data Science.}  \textit{HICSS 52 (accepted).}
+%         \item Gerard C. \textbf{Social Media Analysis for Crisis Informatics in the Cloud} \textit{MS Thesis}
+% 	\end{itemize}
+
+
+\resheading{Skills}
+	\begin{itemize}
+		\resitem{\textbf{Programming:} Python }
+		\resitem{\textbf{Experience with:} C++, Javascript, Flask, HTML, CSS, Git.}
+		\resitem{\textbf{Native languages:} Catalan, Spanish.}
+		\resitem{ \textbf{Advanced:} English - Spent 4 summers in a US camp.}
+		\resitem{\textbf{Hobbies:} Roller Hockey, swimming, kayaking, archery.}
+		\resitem{\textbf{Hackathon participation:} HackUPC (volunteer).}
+	\end{itemize}
+
+
+
+\end{document}
